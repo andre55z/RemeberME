@@ -1,1 +1,68 @@
 @import "tailwindcss";
+@import "tailwindcss-animated";
+
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url('./fonts/Inter-Regular.otf');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ConcertOne-Regular';
+  src: url('./fonts/ConcertOne-Regular.ttf');
+  font-style: normal;
+  font-display: swap;
+}
+
+:root{
+  --font-inter: 'Inter-Regular', sans-serif;
+  --font-concertone: 'ConcertOne-Regular', sans-serif;
+}
+
+.font-inter{
+  font-family: var(--font-inter);
+}
+
+.font-concertone{
+  font-family: var(--font-concertone);
+}
+
+@layer utilities{
+  .bg-primary{
+    background-color: #5c5c5c;
+  }
+  .bg-secundary{
+    background-color: #454545;
+  }
+
+  .font-color-primary{
+    color:#e9e9e9;
+  }
+
+  .font-color-secundary{
+    color: #F36089;
+  }
+
+  .font-color-terciary{
+    color:#0BFFAA;
+  }
+
+  .bottom-color-primary{
+    color: #F36089
+  }
+
+  .bottom-color-secundary{
+    color: #e9e9e9;
+  }
+
+  .bottom-color-terciary{
+    color: #0BFFAA;
+  }
+
+  .bottom-color.quaternary{
+    color:#FA0000;
+  }
+
+  
+}
