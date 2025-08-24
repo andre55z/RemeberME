@@ -18,3 +18,10 @@ export function isLong(str){
     }
     return false;
 }
+
+export function isDiferent(strone, strtwo){
+    if(strone !== strtwo){
+        return true
+    }
+    return false     
+}
