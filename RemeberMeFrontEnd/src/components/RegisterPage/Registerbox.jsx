@@ -38,8 +38,8 @@ function Registerbox({topText, ClassName, setSuccess, Error}){
     }
 
     const navigate = useNavigate()
-    function goBackToHome(resposta){
-        if(resposta==="Cadastro feito com sucesso!"){
+    function goBackToHome(message){
+        if(message==="Cadastro feito com sucesso!"){
             return navigate('/home');
         }
         return
@@ -66,6 +66,7 @@ function Registerbox({topText, ClassName, setSuccess, Error}){
                     ease-in-out ${redBorder}`}
                     setFunction={setNome}
                     variable={nome}
+                    type="text"
                     
                     />
 
@@ -73,7 +74,7 @@ function Registerbox({topText, ClassName, setSuccess, Error}){
                     ClassName={`mt-[5%] w-[300px] lg:w-[500px]  lg:h-[60px] h-[60px] transition-transform hover:scale-105 ease-in-out ${redBorder}`}
                     setFunction={setEmailCadastro}
                     variable={emailCadastro}
-                    
+                    type="text"
                     />
 
                 <Input placeHolder={'Crie uma senha'}
@@ -81,14 +82,14 @@ function Registerbox({topText, ClassName, setSuccess, Error}){
                     ease-in-out ${redBorder}`}
                     setFunction={setSenhaCadastro}
                     variable={senhaCadastro}
-                    
+                    type="password"
                     />
 
                 <Input placeHolder={'Confirme a senha'}
                     ClassName={`mt-[5%] w-[300px] lg:w-[500px]  lg:h-[60px] h-[60px] transition-transform hover:scale-105 ease-in-out ${redBorder}`} 
                     setFunction={setSenhaConfirmada}
                     variable={senhaConfirmada}
-                    
+                    type="password"
                     />
 
                 <Button palavraNoBotao={'Cadastrar'}

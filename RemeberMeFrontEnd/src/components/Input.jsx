@@ -1,8 +1,8 @@
-function Input({placeHolder, ClassName, setFunction, variable}){
+function Input({placeHolder, ClassName, setFunction, variable, type}){
 
 
     return(    <div>
-            <input type="text" placeholder={placeHolder} className={`
+            <input type={type} placeholder={placeHolder} className={`
                 rounded-[15px] 
                 pl-5
                 bg-white placeholder:font-inter placeholder:text-[100%] 

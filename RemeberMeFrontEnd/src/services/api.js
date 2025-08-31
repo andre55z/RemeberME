@@ -34,3 +34,5 @@ export async function postRegisterData(nome, emailCadastro, senhaCadastro, senha
         console.log(err);
     }
 }
+
+

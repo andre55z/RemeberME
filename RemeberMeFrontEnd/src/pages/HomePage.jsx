@@ -17,7 +17,10 @@ function HomePage(){
         }
         else{
 
-            setColorNotif("bg-green-500 rounded-[20px] border-b-green-800")
+            if(Success !== ""){
+                setErrorNotif(true);
+                setColorNotif("bg-green-500 rounded-[20px] border-b-green-800")
+            }
         }
 
     }, [Success])
