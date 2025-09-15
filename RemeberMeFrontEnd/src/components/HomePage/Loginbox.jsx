@@ -15,7 +15,7 @@ function Loginbox({topText, ClassName, Success, setSuccess, Error}){
     const[animateOutLogin, setAnimateOutLogin] = useState("");
     function settingAnimation(message){
         if(message === 'Login feito com sucesso!'){
-            return setAnimateOutLogin("animate-fade-right animate-reverse animate-duration-200");
+            setAnimateOutLogin("animate-fade-right animate-reverse animate-duration-200")
         }
         else
             return
@@ -26,7 +26,9 @@ function Loginbox({topText, ClassName, Success, setSuccess, Error}){
         try{
             const resposta = await postEmailNSenha(email, senha);
             setSuccess(resposta.message);
+
             settingAnimation(resposta.message);
+            setRedBorder("");
             settingToken(resposta.token, resposta.message);
             
         }
@@ -39,6 +41,8 @@ function Loginbox({topText, ClassName, Success, setSuccess, Error}){
     function settingToken(token, message){
         if(message==="Login feito com sucesso!"){
             localStorage.setItem("token", token);
+            setRedBorder("border-3 border-green-500 focus:border-green-600 animate-shake")
+
             setTimeout(()=>{
                 navigate("/listpage");
             }, 4000)
