@@ -46,7 +46,7 @@ function Edit({setFunction, titulo, descricao, id}){
                     onChange={(e)=>setNewDesc(e.target.value)}>
                     
                 </textarea>
-                <div className="flex flex-row gap-5">
+                <div className="flex pb-[5%] flex-row gap-5">
                     <Button 
                             ClassName="bg-red-500 mt-[5%] px-6 py-3 rounded-lg font-inter text-white hover:bg-red-600 transition-colors" 
                             palavraNoBotao="Voltar" 

@@ -6,6 +6,7 @@ import NewTask from "../components/ListPage/NewTask";
 import trash from "../assets/trash.png";
 import AskDlt from "../components/ListPage/AskDlt";
 import Details from "../components/ListPage/Details";
+import Setabk from "../components/Setabk";
 
 function ListPage(){
 
@@ -55,10 +56,12 @@ function ListPage(){
     }
 
     return(
-        <div className="min-h-screen min-w-screen bg-primary relative ">
+        <div className="min-h-screen min-w-screen bg-primary lg:absolute relative ">
+            <Setabk ClassName={" absolute z-10 lg:h-25 h-[10%] lg:w-25 w-[10%] pt-[2%] pl-[2%] mr-[88%]"}/>
             {newTask && <NewTask onClickFunction={()=>setNewTask(false)} setNewTask={setNewTask}/>}
             {askDltComp && <AskDlt setAskDltComp={setAskDltComp} idForDelete={idForDelete}/>}
             {details && <Details titulo={detTitle} descricao={detDesc} setDetails={setDetails} id={detId}/>}
+            
             <div className="flex flex-col items-center">
                 <img src={Title} />
             </div> 
@@ -91,10 +94,15 @@ function ListPage(){
                             </li>
                         </div>
                     )) 
-                : <p>Sem tasks</p>}
+                : <p
+                    className="font-concertone text-[200%] text-purple-500"
+                    style={{ textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }}
+                    >
+                    Sem tasks
+                    </p>}
             </div>
 
-            <div className="top-[30px] bottom-[-45%] ml-[10%]">
+            <div className="top-[30px] bottom-[-45%] lg:mt-0 mt-[10%] ml-[10%]">
                 <Button 
                     ClassName=' lg:h-[100px] lg:w-[100px] h-[10%] w-[25%] mb-10 lg:pb-1 pb-4 bg-button  rounded-[100%] mt-0 text-[50px]' 
                     palavraNoBotao="+" 

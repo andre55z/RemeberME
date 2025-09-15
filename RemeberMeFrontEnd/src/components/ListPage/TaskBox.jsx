@@ -15,7 +15,7 @@ function TaskBox({onClickFunction, setTitulo, setDescricao, titulo, descricao, o
                 value={descricao}
                 onChange={(e)=>{setDescricao(e.target.value)}}
             />
-            <div className="flex-row flex items-center h-[20%] w-[100%] ml-8 mt-20">        
+            <div className="flex-row flex pb-[5%] items-center h-[20%] w-[100%] ml-8 mt-20">        
                 <Button ClassName="h-[50%] ml-3 lg:mt-[2%] pb-1.5 mt-[10%] w-[40%] lg:w-[20%] text-[100%] rounded-[20px] bg-red-500 transition-transform ease-in hover:bg-red-400" palavraNoBotao={"Cancelar"} onClickFunction={onClickFunction}/>
                 <Button ClassName="h-[50%] ml-3 lg:mt-[2%] pb-1.5 mt-[10%] w-[40%] lg:w-[20%] text-[100%] rounded-[20px] bottom-color-terciary transition-transform ease-in hover:bg-green-400" palavraNoBotao={"Adicionar"} onClickFunction={onClickSuccess}/>
 

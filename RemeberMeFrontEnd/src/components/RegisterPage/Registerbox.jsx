@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { postRegisterData } from "../../services/api";
 import { useNavigate } from "react-router-dom";
 
-function Registerbox({topText, ClassName, setSuccess, Error}){
+function Registerbox({topText, ClassName, setSuccess, Success, Error}){
 
     const [nome, setNome] = useState("");
     const [emailCadastro, setEmailCadastro] = useState("");
@@ -48,11 +48,13 @@ function Registerbox({topText, ClassName, setSuccess, Error}){
     }
 
     const [redBorder, setRedBorder] = useState("")
-        useEffect(()=>{
-            if(Error){
-                setRedBorder("border-3 border-red-500 focus:border-red-600 animate-shake")
-            }
-        }, [Error, redBorder])
+    useEffect(() => {
+        if(Success && Success !== "Cadastro feito com sucesso!"){
+            setRedBorder("border-3 border-red-500 focus:border-red-600 animate-shake");
+        } else {
+            setRedBorder("");
+        }
+    }, [Success]);
 
 
 

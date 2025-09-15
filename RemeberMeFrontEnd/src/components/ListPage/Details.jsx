@@ -13,7 +13,7 @@ function Details({titulo, descricao, setDetails, id}){
         setEditTask(true);
     }
     return(
-        <div className={` absolute z-30 w-full h-full mix-blend-color:multiply bg-black/70 flex flex-col items-center`}>
+        <div className={`absolute z-30 w-full h-full mix-blend-color:multiply bg-black/70 flex flex-col items-center`}>
             {editTask && <Edit setFunction={setEditTask} titulo={titulo}
                         descricao={descricao} id={id}/>}
             <div className="lg:w-[50%] w-[80%] h-[35%] lg:h-[60%] bg-gradient-to-br from-pink-500 to-purple-700 mt-[5%] rounded-[30px] flex flex-col items-center">
@@ -23,7 +23,7 @@ function Details({titulo, descricao, setDetails, id}){
                         {descricao}
                     </p>
                 </div>
-                <div className="flex flex-row gap-4 mt-13 lg:mt-30">
+                <div className="flex flex-row pb-[5%] gap-4 mt-13 lg:mt-30">
                     <Button 
                         ClassName="bg-red-500 px-6 py-3 rounded-lg font-inter text-white hover:bg-red-600 transition-colors" 
                         palavraNoBotao="Voltar" 
