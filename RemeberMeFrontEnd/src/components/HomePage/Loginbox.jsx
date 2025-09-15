@@ -15,7 +15,7 @@ function Loginbox({topText, ClassName, Success, setSuccess, Error}){
     const[animateOutLogin, setAnimateOutLogin] = useState("");
     function settingAnimation(message){
         if(message === 'Login feito com sucesso!'){
-            return setAnimateOutLogin("animate-fade-right animate-reverse animate-duration-200");
+            setAnimateOutLogin("animate-fade-right animate-reverse animate-duration-200")
         }
         else
             return
@@ -26,7 +26,10 @@ function Loginbox({topText, ClassName, Success, setSuccess, Error}){
         try{
             const resposta = await postEmailNSenha(email, senha);
             setSuccess(resposta.message);
+
             settingAnimation(resposta.message);
+            setRedBorder("");
+            settingToken(resposta.token, resposta.message);
             
         }
         catch(err){
@@ -35,7 +38,16 @@ function Loginbox({topText, ClassName, Success, setSuccess, Error}){
         }
     }
 
-    
+    function settingToken(token, message){
+        if(message==="Login feito com sucesso!"){
+            localStorage.setItem("token", token);
+            setRedBorder("border-3 border-green-500 focus:border-green-600 animate-shake")
+
+            setTimeout(()=>{
+                navigate("/listpage");
+            }, 4000)
+        }
+    }
 
     const navigate = useNavigate();
     function goToRegister(){
@@ -62,12 +74,14 @@ function Loginbox({topText, ClassName, Success, setSuccess, Error}){
                     ClassName={`mt-[20%] lg:mt-[10%] w-[300px] lg:w-[500px] h-[60px] lg:h-[60px]  transition-transform hover:scale-105 
                     ease-in-out ${redBorder}`}
                     setFunction={setEmail}
-                    variable = {email}/>
+                    variable = {email}
+                    type="text"/>
 
                 <Input placeHolder={'Insira sua senha'}
                     ClassName={`mt-[5%] w-[300px] lg:w-[500px]  lg:h-[60px] h-[60px] transition-transform hover:scale-105 ease-in-out ${redBorder}`}
                     setFunction = {setSenha}
-                    variable = {senha}/>
+                    variable = {senha}
+                    type="password"/>
 
                 <Button palavraNoBotao={'Entrar'}
                     ClassName={'w-[55%] lg:mt-[3%] h-[80px] lg:h-[100px] rounded-[20px] bg-button mt-[10%] hover:bg-white hover:text-pink-500 transition-all duration-300 ease-in-out'}
