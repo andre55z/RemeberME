@@ -17,6 +17,10 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json())
 app.use(cors());
 
+app.get('/', (req, res) => {
+  res.send('API RememberMe funcionando!');
+});
+
 app.post('/validNuse', async (req, res)=>{
     let {email, senha} = req.body;
 
