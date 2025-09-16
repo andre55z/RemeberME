@@ -4,6 +4,7 @@ import TaskBox from "./TaskBox";
 import { validTask } from "../../services/api";
 import ErrorNotif from "../ErrorNotif";
 import { postTask } from "../../services/api";
+import useNavigate from "react-router-dom"
 
 function NewTask({onClickFunction, setNewTask}){
     const [titulo, setTitulo] = useState("");
@@ -12,7 +13,7 @@ function NewTask({onClickFunction, setNewTask}){
     const [erro, setErro] = useState(false);
     const [erroMsg, setErroMsg] = useState("");
 
-
+    const navigate = useNavigate();
     const taskError = async ()=>{
         const response = await validTask(titulo, descricao);
         if(response.message != "Sucesso na task"){
@@ -22,7 +23,7 @@ function NewTask({onClickFunction, setNewTask}){
         else{
             postTask(titulo, descricao);
             setNewTask(false);
-            window.location.reload();
+            navigate("/listpage");
         }
     }
 
