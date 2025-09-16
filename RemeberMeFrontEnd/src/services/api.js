@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://remeberme.onrender.com';
 
 
 export async function postEmailNSenha(email, senha){
