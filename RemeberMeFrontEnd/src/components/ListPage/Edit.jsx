@@ -3,6 +3,7 @@ import Button from "../Button";
 import Input from "../Input";
 import { editTheTask } from "../../services/api";
 import ErrorNotif from "../ErrorNotif";
+import { useNavigate } from 'react-router-dom';
 
 
 function Edit({setFunction, titulo, descricao, id}){
@@ -13,6 +14,8 @@ function Edit({setFunction, titulo, descricao, id}){
     const [erro, setErro] = useState(false);
     const [erroMsg, setErroMsg] = useState("");
 
+    const navigate = useNavigate();
+
     async function saveEdit(){
         try{
             const resposta = await editTheTask(newTitle, newDesc, id);
@@ -22,7 +25,7 @@ function Edit({setFunction, titulo, descricao, id}){
             }
             else{
                 setFunction(false)
-                window.location.reload()
+                navigate("/listpage");
             }
             
         }catch(err){
