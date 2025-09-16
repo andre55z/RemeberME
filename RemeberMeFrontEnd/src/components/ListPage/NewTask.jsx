@@ -4,7 +4,7 @@ import TaskBox from "./TaskBox";
 import { validTask } from "../../services/api";
 import ErrorNotif from "../ErrorNotif";
 import { postTask } from "../../services/api";
-import useNavigate from "react-router-dom"
+import { useNavigate } from 'react-router-dom';
 
 function NewTask({onClickFunction, setNewTask}){
     const [titulo, setTitulo] = useState("");
