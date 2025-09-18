@@ -104,7 +104,7 @@ function ListPage(){
 
             <div className="top-[30px] bottom-[-45%] lg:mt-0 mt-[10%] ml-[10%]">
                 <Button 
-                    ClassName=' lg:h-[100px] lg:w-[100px] h-[100px] w-[100px] mb-10 lg:pb-0.5 pb-4 bg-button  rounded-[100%] mt-0 text-[50px]' 
+                    ClassName=' lg:h-[100px] lg:w-[100px] h-[85px] w-[85px] mb-10 lg:pb-0.5 pb-4 bg-button  rounded-[100%] mt-0 text-[50px]' 
                     palavraNoBotao="+" 
                     onClickFunction={()=>setNewTask(true)}
                 />
