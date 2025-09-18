@@ -84,7 +84,7 @@ function ListPage(){
                             <li className="font-concertone lg:text-[25px] text-[20px] text-white">
                                 <div className="flex flex-row lg:gap-5 gap-5">
                                     <button 
-                                        className={`lg:rounded-[20px] rounded-[10px] lg:h-11 h-13 w-[15%] lg:w-[7%] ${n.feito ? "bg-green-500" : "bg-white"} pb-1.5 lg:pb-0`} 
+                                        className={`lg:rounded-[20px] rounded-[10px] lg:h-11 h-13 w-[15%] lg:w-[7%] ${n.feito ? "bg-green-500" : "bg-white"} pb-1.5 lg:pb-0 lg:pt-1.5`} 
                                         onClick={() => check(n.id, n.feito)}
                                     />
                                     <p className="max-w-[40%]">{n.titulo}</p>
