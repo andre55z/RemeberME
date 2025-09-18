@@ -117,6 +117,12 @@ export async function editTheTask(titulo, descricao, id) {
 export async function getTasks() {
     try{
         const token = localStorage.getItem("token");
+        console.log("Enviando token:", token); // debug
+        
+        if (!token) {
+            throw new Error("Token não encontrado no localStorage");
+        }
+        
         const response = await axios.get(`${API_URL}/getTasks`, {
             headers: {
                 Authorization: `Bearer ${token}` 
@@ -124,9 +130,9 @@ export async function getTasks() {
         });
         return response.data;
     }catch(err){
-        console.log("Erro ao pegar as notificações" + err)
+        console.log("Erro completo:", err.response?.data || err.message);
+        throw err;
     }
-
 }
 
 export async function checkingTasks(id, check){
