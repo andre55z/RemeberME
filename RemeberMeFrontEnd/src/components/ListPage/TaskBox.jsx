@@ -4,7 +4,7 @@ import Button from "../Button";
 function TaskBox({onClickFunction, setTitulo, setDescricao, titulo, descricao, onClickSuccess}){
 
     return(
-        <div className="w-[90%] z-10 max-w-md mx-auto bg-gradient-to-br from-pink-500 to-purple-700 mt-8 p-6 rounded-[30px] flex flex-col items-center shadow-lg">
+        <div className="w-[90%]  max-w-md mx-auto bg-gradient-to-br from-pink-500 to-purple-700 mt-15 p-6 rounded-[30px] flex flex-col items-center shadow-lg">
             <Input type="text" placeHolder={"Insira o titulo"} 
             ClassName={"w-full h-16 outline-none font-inter text-lg transition-all duration-300 hover:scale-105 focus:scale-105 rounded-xl px-4"}
             setFunction={setTitulo}
