@@ -98,7 +98,7 @@ function ListPage(){
                     className="font-concertone text-[200%] text-purple-500"
                     style={{ textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }}
                     >
-                    Sem tasks
+                    Sem tarefas
                     </p>}
             </div>
 
