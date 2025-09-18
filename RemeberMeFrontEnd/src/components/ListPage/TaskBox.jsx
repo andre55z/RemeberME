@@ -4,20 +4,20 @@ import Button from "../Button";
 function TaskBox({onClickFunction, setTitulo, setDescricao, titulo, descricao, onClickSuccess}){
 
     return(
-        <div className="lg:w-[50%] w-[80%]  bg-gradient-to-br from-pink-500 to-purple-700 mt-[5%] rounded-[30px] flex flex-col items-center">
+        <div className="w-[90%] max-w-md mx-auto bg-gradient-to-br from-pink-500 to-purple-700 mt-8 p-6 rounded-[30px] flex flex-col items-center shadow-lg">
             <Input type="text" placeHolder={"Insira o titulo"} 
-            ClassName={"h-20 mt-[20%] lg:w-[170%] w-[80%] outline-none lg:ml-[-34%] ml-[10%] font-inter text-[120%] transition-transform hover:scale-105 ease-in-out"}
+            ClassName={"w-full h-16 outline-none font-inter text-lg transition-all duration-300 hover:scale-105 focus:scale-105 rounded-xl px-4"}
             setFunction={setTitulo}
             variable={titulo}/> 
             <textarea 
-                className="w-[80%] lg:h-70 mt-[5%] outline-none transition-transform hover:scale-105 ease-in-out h-100 rounded-[20px] ml-[1%] p-4 resize-y font-inter text-[110%] bg-amber-50" 
+                className="w-full h-32 mt-4 outline-none transition-all duration-300 hover:scale-105 focus:scale-105 rounded-xl p-4 resize-y font-inter text-base bg-amber-50 placeholder-gray-500" 
                 placeholder="Descreva sua tarefa..."
                 value={descricao}
                 onChange={(e)=>{setDescricao(e.target.value)}}
             />
-            <div className="flex-row flex pb-[5%] items-center h-[20%] w-[100%] ml-8 mt-[10%]">        
-                <Button ClassName="h-[50%] ml-3 lg:mt-[2%] pb-1.5  w-[40%] lg:w-[20%] text-[100%] rounded-[20px] bg-red-500 transition-transform ease-in hover:bg-red-400" palavraNoBotao={"Cancelar"} onClickFunction={onClickFunction}/>
-                <Button ClassName="h-[50%] ml-3 lg:mt-[2%] pb-1.5  w-[40%] lg:w-[20%] text-[100%] rounded-[20px] bottom-color-terciary transition-transform ease-in hover:bg-green-400" palavraNoBotao={"Adicionar"} onClickFunction={onClickSuccess}/>
+            <div className="flex gap-4 mt-6 w-full justify-center">        
+                <Button ClassName="flex-1 max-w-[120px] h-12 text-base rounded-xl bg-red-500 hover:bg-red-400 transition-all duration-300 hover:scale-105 text-white font-medium" palavraNoBotao={"Cancelar"} onClickFunction={onClickFunction}/>
+                <Button ClassName="flex-1 max-w-[120px] h-12 text-base rounded-xl bg-green-500 hover:bg-green-400 transition-all duration-300 hover:scale-105 text-white font-medium" palavraNoBotao={"Adicionar"} onClickFunction={onClickSuccess}/>
 
             </div>
         </div>
