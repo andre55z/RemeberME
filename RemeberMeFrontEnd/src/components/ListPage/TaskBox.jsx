@@ -4,7 +4,7 @@ import Button from "../Button";
 function TaskBox({onClickFunction, setTitulo, setDescricao, titulo, descricao, onClickSuccess}){
 
     return(
-        <div className="lg:w-[50%] w-[80%] h-[70%] bg-gradient-to-br from-pink-500 to-purple-700 mt-[5%] rounded-[30px] flex flex-col items-center">
+        <div className="lg:w-[50%] w-[80%] lg:h-70 bg-gradient-to-br from-pink-500 to-purple-700 mt-[5%] rounded-[30px] flex flex-col items-center">
             <Input type="text" placeHolder={"Insira o titulo"} 
             ClassName={"h-20 mt-[20%] lg:w-[170%] w-[80%] outline-none lg:ml-[-34%] ml-[10%] font-inter text-[120%] transition-transform hover:scale-105 ease-in-out"}
             setFunction={setTitulo}
@@ -15,7 +15,7 @@ function TaskBox({onClickFunction, setTitulo, setDescricao, titulo, descricao, o
                 value={descricao}
                 onChange={(e)=>{setDescricao(e.target.value)}}
             />
-            <div className="flex-row flex pb-[5%] items-center h-[20%] w-[100%] ml-8 mt-[20%]">        
+            <div className="flex-row flex pb-[5%] items-center h-[20%] w-[100%] ml-8 mt-[10%]">        
                 <Button ClassName="h-[50%] ml-3 lg:mt-[2%] pb-1.5 lg:pb-0.5 w-[40%] lg:w-[20%] text-[100%] rounded-[20px] bg-red-500 transition-transform ease-in hover:bg-red-400" palavraNoBotao={"Cancelar"} onClickFunction={onClickFunction}/>
                 <Button ClassName="h-[50%] ml-3 lg:mt-[2%] pb-1.5 lg:pb-0.5 w-[40%] lg:w-[20%] text-[100%] rounded-[20px] bottom-color-terciary transition-transform ease-in hover:bg-green-400" palavraNoBotao={"Adicionar"} onClickFunction={onClickSuccess}/>
 
