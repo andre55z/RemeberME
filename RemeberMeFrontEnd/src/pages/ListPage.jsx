@@ -88,7 +88,7 @@ function ListPage(){
                                         onClick={() => check(n.id, n.feito)}
                                     />
                                     <p className="max-w-[40%]">{n.titulo}</p>
-                                    <img src={trash} className="lg:w-[40px] pt-2 lg:h-[40px] w-[30px] h-[30px] ml-auto" onClick={()=>askDlt(n.id)}/>
+                                    <img src={trash} className="lg:w-[40px] mt-2 lg:h-[40px] w-[30px] h-[30px] ml-auto" onClick={()=>askDlt(n.id)}/>
                                     <h1 className="lg:w-[40px] lg:h-[40px] text-[40px] lg:mt-[-1%] mt-[-5%] w-[30px] h-[30px] text-black font-concertone" onClick={()=>showDetails(n.titulo, n.descricao, n.id)}>+</h1>
                                 </div>
                             </li>
