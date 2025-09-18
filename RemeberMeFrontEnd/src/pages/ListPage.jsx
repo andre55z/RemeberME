@@ -57,7 +57,7 @@ function ListPage(){
 
     return(
         <div className="min-h-screen min-w-screen bg-primary lg:absolute relative ">
-            <Setabk ClassName={" absolute z-10 lg:h-25 h-[10%] lg:w-25 w-[10%] pt-[2%] pl-[2%] mr-[88%]"}/>
+            <Setabk ClassName={" absolute z-10 lg:h-25 h-[50px] lg:w-25 w-[50px] pt-[2%] pl-[2%] mr-[88%]"}/>
             {newTask && <NewTask onClickFunction={()=>setNewTask(false)} setNewTask={setNewTask}/>}
             {askDltComp && <AskDlt setAskDltComp={setAskDltComp} idForDelete={idForDelete}/>}
             {details && <Details titulo={detTitle} descricao={detDesc} setDetails={setDetails} id={detId}/>}
