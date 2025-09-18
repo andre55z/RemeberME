@@ -10,14 +10,14 @@ function TaskBox({onClickFunction, setTitulo, setDescricao, titulo, descricao, o
             setFunction={setTitulo}
             variable={titulo}/> 
             <textarea 
-                className="w-[80%] lg:h-10 mt-[5%] outline-none transition-transform hover:scale-105 ease-in-out h-100 rounded-[20px] ml-[1%] p-4 resize-y font-inter text-[110%] bg-amber-50" 
+                className="w-[80%] lg:h-70 mt-[5%] outline-none transition-transform hover:scale-105 ease-in-out h-100 rounded-[20px] ml-[1%] p-4 resize-y font-inter text-[110%] bg-amber-50" 
                 placeholder="Descreva sua tarefa..."
                 value={descricao}
                 onChange={(e)=>{setDescricao(e.target.value)}}
             />
-            <div className="flex-row flex pb-[5%] items-center h-[20%] w-[100%] ml-8 mt-20">        
-                <Button ClassName="h-[50%] ml-3 lg:mt-[2%] pb-1.5 mt-[10%] w-[40%] lg:w-[20%] text-[100%] rounded-[20px] bg-red-500 transition-transform ease-in hover:bg-red-400" palavraNoBotao={"Cancelar"} onClickFunction={onClickFunction}/>
-                <Button ClassName="h-[50%] ml-3 lg:mt-[2%] pb-1.5 mt-[10%] w-[40%] lg:w-[20%] text-[100%] rounded-[20px] bottom-color-terciary transition-transform ease-in hover:bg-green-400" palavraNoBotao={"Adicionar"} onClickFunction={onClickSuccess}/>
+            <div className="flex-row flex pb-[5%] items-center h-[20%] w-[100%] ml-8 mt-[20%]">        
+                <Button ClassName="h-[50%] ml-3 lg:mt-[2%] pb-1.5 lg:pb-0.5 w-[40%] lg:w-[20%] text-[100%] rounded-[20px] bg-red-500 transition-transform ease-in hover:bg-red-400" palavraNoBotao={"Cancelar"} onClickFunction={onClickFunction}/>
+                <Button ClassName="h-[50%] ml-3 lg:mt-[2%] pb-1.5 lg:pb-0.5 w-[40%] lg:w-[20%] text-[100%] rounded-[20px] bottom-color-terciary transition-transform ease-in hover:bg-green-400" palavraNoBotao={"Adicionar"} onClickFunction={onClickSuccess}/>
 
             </div>
         </div>
