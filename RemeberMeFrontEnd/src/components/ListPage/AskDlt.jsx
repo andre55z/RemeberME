@@ -1,6 +1,5 @@
 import {deleteTask} from "../../services/api";
 import Button from "../Button";
-import { useNavigate } from 'react-router-dom';
 
 function AskDlt({setAskDltComp, idForDelete}){
 
@@ -9,11 +8,10 @@ function AskDlt({setAskDltComp, idForDelete}){
     }
 
 
-    const navigate = useNavigate();
     async function deleting(idForDelete){
         const response = await deleteTask(idForDelete);
         if (response.message == 'Task excluida.'){
-            navigate("/listpage");
+            window.location.reload();
         }
         else{
             alert(response.message)

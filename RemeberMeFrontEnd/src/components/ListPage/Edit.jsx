@@ -14,8 +14,6 @@ function Edit({setFunction, titulo, descricao, id}){
     const [erro, setErro] = useState(false);
     const [erroMsg, setErroMsg] = useState("");
 
-    const navigate = useNavigate();
-
     async function saveEdit(){
         try{
             const resposta = await editTheTask(newTitle, newDesc, id);
@@ -25,7 +23,7 @@ function Edit({setFunction, titulo, descricao, id}){
             }
             else{
                 setFunction(false)
-                navigate("/listpage");
+                window.location.reload();
             }
             
         }catch(err){
