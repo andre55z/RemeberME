@@ -57,7 +57,7 @@ function ListPage(){
 
     return(
         <div className="min-h-screen min-w-screen bg-primary lg:absolute relative ">
-            <Setabk ClassName={" absolute z-10 lg:h-25 h-[5%] lg:w-25 w-[10%] pt-[2%] pl-[2%] mr-[88%]"}/>
+            <Setabk ClassName={" absolute z-10 lg:h-25 h-[50px] lg:w-25 w-[50px] pt-[2%] pl-[2%] mr-[88%]"}/>
             {newTask && <NewTask onClickFunction={()=>setNewTask(false)} setNewTask={setNewTask}/>}
             {askDltComp && <AskDlt setAskDltComp={setAskDltComp} idForDelete={idForDelete}/>}
             {details && <Details titulo={detTitle} descricao={detDesc} setDetails={setDetails} id={detId}/>}
@@ -104,7 +104,7 @@ function ListPage(){
 
             <div className="top-[30px] bottom-[-45%] lg:mt-0 mt-[10%] ml-[10%]">
                 <Button 
-                    ClassName=' lg:h-[100px] lg:w-[100px] h-[100px] w-[100px] mb-10 lg:pb-1 pb-4 bg-button  rounded-[100%] mt-0 text-[50px]' 
+                    ClassName=' lg:h-[100px] lg:w-[100px] h-[100px] w-[100px] mb-10 lg:pb-0.5 pb-4 bg-button  rounded-[100%] mt-0 text-[50px]' 
                     palavraNoBotao="+" 
                     onClickFunction={()=>setNewTask(true)}
                 />
