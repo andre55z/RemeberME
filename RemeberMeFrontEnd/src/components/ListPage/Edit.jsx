@@ -36,7 +36,7 @@ function Edit({setFunction, titulo, descricao, id}){
     return(
         <div className="bg-black/70 w-full h-full absolute z-30 mix-blend-color:multiply flex flex-col items-center">
             {erro && <ErrorNotif message={erroMsg} ClassName={" h-[100px] mt-[20px] w-[300px] text-center p-7 rounded-[20px] font-inter"} colorNotif={"bg-red-500"}/>}
-            <div className="lg:w-[50%] w-[80%] h-[60%] lg:h-[70%] bg-gradient-to-br from-pink-500 to-purple-700 mt-[5%] rounded-[30px] flex flex-col items-center">
+            <div className="lg:w-[50%] w-[80%] h-[60%] lg:h-[70%] animate-fade duration-75 bg-gradient-to-br from-pink-500 to-purple-700 mt-[5%] rounded-[30px] flex flex-col items-center">
                 <Input type="text" 
                     ClassName={"w-[150%]  ml-[-25%] mt-[10%] lg:h-15 h-10 font-inter text-[70%] lg:text-[100%] transition-transform hover:scale-105 ease-in-out"}
                     variable={newTitle}
