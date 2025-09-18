@@ -13,10 +13,10 @@ function Details({titulo, descricao, setDetails, id}){
         setEditTask(true);
     }
     return(
-        <div className={`absolute z-30 animate-fade duration-75 w-full h-full mix-blend-color:multiply bg-black/70 flex flex-col items-center`}>
+        <div className={`absolute z-30  w-full h-full mix-blend-color:multiply bg-black/70 flex flex-col items-center`}>
             {editTask && <Edit setFunction={setEditTask} titulo={titulo}
                         descricao={descricao} id={id}/>}
-            <div className="lg:w-[50%] w-[80%] h-[35%] lg:h-[60%] bg-gradient-to-br from-pink-500 to-purple-700 mt-[5%] rounded-[30px] flex flex-col items-center">
+            <div className="animate-fade duration-75 lg:w-[50%] w-[80%] h-[35%] lg:h-[60%] bg-gradient-to-br from-pink-500 to-purple-700 mt-[5%] rounded-[30px] flex flex-col items-center">
                 <h1 className="font-concertone text-purple-800 mt-[5%] lg:mt-[2%] [text-shadow:0_0_2px_black]  text-center text-[25px] lg:text-[70px]">{titulo}</h1>
                 <div className="max-w-[80%] text-center">
                     <p className="font-inter text-[130%] mt-[5%] break-words">
