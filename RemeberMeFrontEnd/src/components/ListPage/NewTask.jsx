@@ -19,7 +19,7 @@ function NewTask({onClickFunction, setNewTask}){
             setErroMsg(response.message);
         }
         else{
-            postTask(titulo, descricao);
+            await postTask(titulo, descricao);
             setNewTask(false);
             window.location.reload();
         }
