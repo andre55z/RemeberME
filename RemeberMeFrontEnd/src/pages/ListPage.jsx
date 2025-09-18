@@ -44,7 +44,7 @@ function ListPage(){
         setIdForDelete(id);
     }
 
-    const [details, setDetails] = useState("");
+    const [details, setDetails] = useState(false);
     const [detTitle, setDetTitle] = useState("");
     const [detDesc, setDetDesc] = useState("");
     const [detId, setDetId] = useState("");
