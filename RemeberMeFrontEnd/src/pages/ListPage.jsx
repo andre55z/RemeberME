@@ -57,7 +57,7 @@ function ListPage(){
 
     return(
         <div className="min-h-screen min-w-screen bg-primary lg:absolute relative ">
-            <Setabk ClassName={" absolute z-10 lg:h-25 h-[5%] lg:w-25 w-[10%] pt-[2%] pl-[2%] mr-[88%]"}/>
+            <Setabk ClassName={" absolute z-10 lg:h-25 h-[10%] lg:w-25 w-[10%] pt-[2%] pl-[2%] mr-[88%]"}/>
             {newTask && <NewTask onClickFunction={()=>setNewTask(false)} setNewTask={setNewTask}/>}
             {askDltComp && <AskDlt setAskDltComp={setAskDltComp} idForDelete={idForDelete}/>}
             {details && <Details titulo={detTitle} descricao={detDesc} setDetails={setDetails} id={detId}/>}
@@ -88,7 +88,7 @@ function ListPage(){
                                         onClick={() => check(n.id, n.feito)}
                                     />
                                     <p className="max-w-[40%]">{n.titulo}</p>
-                                    <img src={trash} className="lg:w-[40px] lg:h-[40px] lg:pt-0 pt-1 w-[30px] h-[30px] ml-auto" onClick={()=>askDlt(n.id)}/>
+                                    <img src={trash} className="lg:w-[40px] lg:h-[40px] w-[30px] h-[30px] ml-auto" onClick={()=>askDlt(n.id)}/>
                                     <h1 className="lg:w-[40px] lg:h-[40px] text-[40px] lg:mt-[-1%] mt-[-5%] w-[30px] h-[30px] text-black font-concertone" onClick={()=>showDetails(n.titulo, n.descricao, n.id)}>+</h1>
                                 </div>
                             </li>
