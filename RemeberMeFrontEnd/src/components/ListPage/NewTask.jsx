@@ -5,12 +5,19 @@ import { validTask } from "../../services/api";
 import ErrorNotif from "../ErrorNotif";
 import { postTask } from "../../services/api";
 
+
 function NewTask({onClickFunction, setNewTask}){
     const [titulo, setTitulo] = useState("");
     const [descricao, setDescricao] = useState("");
 
     const [erro, setErro] = useState(false);
     const [erroMsg, setErroMsg] = useState("");
+
+    const [loading, setLoading] = useState(false);
+    const waitBD = async ()=>{
+        setLoading(true);
+        await postTask(titulo, descricao);
+    }
 
     const taskError = async ()=>{
         const response = await validTask(titulo, descricao);
