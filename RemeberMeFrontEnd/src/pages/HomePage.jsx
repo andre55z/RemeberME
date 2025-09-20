@@ -1,6 +1,7 @@
 import Loginbox from "../components/HomePage/Loginbox";
 import Title from "../components/Title";
 import Brain from "../components/Brain";
+
 import ErrorNotif from "../components/ErrorNotif";
 import { useEffect, useState } from "react";
 
