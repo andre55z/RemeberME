@@ -28,6 +28,7 @@ function HomePage(){
     return(
         <div className="h-full w-full md:relative absolute bg-primary flex flex-col items-center">
             <Title ClassName={`w-[50%] h-[20%] mt-[10%] lg:w-[25%] lg:h-[40%] lg:mt-[0%] `}/>
+            {loading && <Loading/>}
             { errorNotif && <ErrorNotif message={Success} ClassName={"p-10 mt-[-10%] font-inter"} colorNotif={colorNotif}/>}
             <div className="lg:flex lg:flex-row lg:items-center hidden">
                 <Loginbox topText="Login"
