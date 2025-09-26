@@ -3,6 +3,7 @@ import Button from "../Button";
 import { useEffect, useState } from 'react';
 import { postEmailNSenha } from '../../services/api';
 import { useNavigate } from 'react-router-dom';
+import Loading from '../Loading';
 
 
 function Loginbox({topText, ClassName, Success, setSuccess, Error}){
@@ -21,10 +22,16 @@ function Loginbox({topText, ClassName, Success, setSuccess, Error}){
             return
     }
 
-    
+    const [loading, setLoading] = useState(false);
+    async function postingAll(email, senha){
+        setLoading(true);
+        return await postEmailNSenha(email, senha);
+        
+    }
+
     const handleLogin = async () =>{
         try{
-            const resposta = await postEmailNSenha(email, senha);
+            const resposta = await postingAll(email, senha);
             setSuccess(resposta.message);
 
             settingAnimation(resposta.message);
@@ -71,6 +78,7 @@ function Loginbox({topText, ClassName, Success, setSuccess, Error}){
 
     return(
             <div className={`rounded-[30px] lg:h-[100%]  bg-primary shadow-[-5px_5px_10px_rgba(0,0,0,0.5)] shadow-black w-[85%]  mt-[5%] lg:mt-[5%] ${ClassName} flex-col items-center mb-[5%] animate-fade-left animate-duration-2000 ${animateOutLogin}`}>
+                {loading && <Loading/>}
                 <h1 className="font-concertone text-[250%] font-color-primary mt-[10%]">{topText}</h1>
                 <Input placeHolder={'Insira seu e-mail'}
                     ClassName={`mt-[20%] lg:mt-[10%] w-[300px] lg:w-[500px] h-[60px] lg:h-[60px]  transition-transform hover:scale-105 
