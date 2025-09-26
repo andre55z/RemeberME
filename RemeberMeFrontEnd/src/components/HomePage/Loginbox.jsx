@@ -41,7 +41,6 @@ function Loginbox({topText, ClassName, Success, setSuccess, Error}){
         }
         catch(err){
             console.log(err);
-            throw err;
         }
     }
 
